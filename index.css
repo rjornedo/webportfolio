@@ -1,0 +1,75 @@
+
+/*Navbar*/
+.navbar, .navbar-nav, .nav-link, .navbar-brand {
+	font-family: 'Sour Gummy', sans-serif;
+	font-size: 25px;
+}
+
+html, body {
+	scroll-behavior: smooth;
+}
+
+
+/*About Me*/
+#landing {
+	background: linear-gradient(
+		rgba(0, 34, 65, 0.4), 
+		rgba(0, 34, 65, 0.4) 
+	),
+	url("./images/bg.png");	
+	background-size: cover;
+	background-position: 30% 90%;
+	letter-spacing: 3px;
+	overflow: hidden;
+
+}
+
+#title, #me  {
+	font-family: Libre Baskerville;
+	text-shadow: 3px 3px 0px black, -3px -3px 0px black, 
+	3px -3px 0px black, -3px 3px 0px black;
+}
+
+.mt-3 {
+	font-family: 'Sour Gummy', sans-serif;
+	font-size: 1.3em;
+
+}
+
+#image {
+	width: 300px;          
+	height: 400px;         
+	border-radius: 50%; 
+	object-fit: cover; 
+	margin-bottom: 20px;    
+}
+
+@media (max-width: 992px) {
+	#landing .row {
+		flex-direction: column; 
+		align-items: center;
+	}
+}
+
+#name, #title, .mt-3 {
+	text-align: center; 
+}
+/*Projects*/
+
+.card {
+	border-radius: 8px;
+}
+
+.card-title, .card-text {
+	font-family: 'Sour Gummy', sans-serif;
+}
+
+/*Tools*/
+#tools {
+	font-family: 'Sour Gummy', sans-serif;
+
+}
+
+.modal-title, .modal-body {
+	font-family: Libre Baskerville;
+}
