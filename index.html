@@ -195,78 +195,53 @@
 				<!-- Contact -->
 
 				<div id="contact" class="container bg-dark p-3 text-center text-white my-3">
-					<h2>Contact</h2>
-					<a href="https://www.facebook.com/" target="blank"><img src="./images/fb.png" width="25" height="25"></a>
-					<a href="https://www.linkedin.com/" target="blank"><img src="./images/li.png" width="25" height="25"></a>
+    <h2>Contact</h2>
+    <a href="https://www.facebook.com/" target="_blank"><img src="./images/fb.png" width="25" height="25"></a>
+    <a href="https://www.linkedin.com/" target="_blank"><img src="./images/li.png" width="25" height="25"></a>
 
-					<div class="row mt-4 d-flex justify-content-center">
-						<!-- Contact Form -->
-						<div class="col-xs-12 col-md-6 col-lg-6">
-							<form id="form-col">
-								<div class="form-group pb-3">
-									<label for="name">Name</label>
-									<input type="text" class="form-control" id="name" placeholder="Enter your full name" required>
-								</div>
-								<div class="form-group pb-3">
-									<label for="email">Email address</label>
-									<input type="email" class="form-control" id="email" placeholder="Enter your email" required>
-								</div>
-								<div class="form-group pb-3">
-									<label for="contact">Contact Number</label>
-									<input type="number" class="form-control" id="number" placeholder="Enter your Contact Number" required>
-								</div>
-								<div class="form-group pb-3">
-									<label for="concern">Concern</label>
-									<select name="concern" class="form-control" id="concern" required>
-										<option value=""></option>
-										<option value="1">1</option>
-										<option value="2">2</option>
-										<option value="3">3</option>
-									</select>
-								</div>
-								<div class="form-group pb-3">
-									<label for="message">Message</label>
-									<textarea class="form-control" id="message" rows="4" placeholder="Enter your message" required></textarea>
-								</div>
-								<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalDiv">Submit</button>
-							</form>
-						</div>
+    <div class="row mt-4 d-flex justify-content-center">
+        <!-- Contact Form -->
+        <div class="col-xs-12 col-md-6 col-lg-6">
+            <form id="form-col" action="#" method="post">
+                <div class="form-group pb-3">
+                    <label for="name">Name</label>
+                    <input type="text" class="form-control" id="name" placeholder="Enter your full name" required>
+                </div>
+                <div class="form-group pb-3">
+                    <label for="email">Email address</label>
+                    <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group pb-3">
+                    <label for="contact">Contact Number</label>
+                    <input type="tel" class="form-control" id="number" placeholder="Enter your Contact Number" required>
+                </div>
+                <div class="form-group pb-3">
+                    <label for="concern">Concern</label>
+                    <select name="concern" class="form-control" id="concern" required>
+                        <option value="">Select Concern</option>
+                        <option value="1">Concern 1</option>
+                        <option value="2">Concern 2</option>
+                        <option value="3">Concern 3</option>
+                    </select>
+                </div>
+                <div class="form-group pb-3">
+                    <label for="message">Message</label>
+                    <textarea class="form-control" id="message" rows="4" placeholder="Enter your message" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
 
-						<!-- Google Map -->
-						<div class="col-xs-12 col-md-6 col-lg-6 mt-3 mt-md-0">
-							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3865.8466855815245!2d121.0139142745682!3d14.32033668387795!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397d6f6c65d5e6b%3A0x57d2e827f14316db!2sAlta%20Tierra%20Homes!5e0!3m2!1sen!2sph!4v1731486170399!5m2!1sen!2sph"
-							width="100%" height="450" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-						</div>
-					</div>
+        <!-- Google Map -->
+        <div class="col-xs-12 col-md-6 col-lg-6 mt-3 mt-md-0">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3865.8466855815245!2d121.0139142745682!3d14.32033668387795!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397d6f6c65d5e6b%3A0x57d2e827f14316db!2sAlta%20Tierra%20Homes!5e0!3m2!1sen!2sph!4v1731486170399!5m2!1sen!2sph"
+                width="100%" height="450" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+</div>
 
-					<!-- Modal -->
-					<!-- <div class="modal" tabindex="-1" id="modalDiv">
-						<div class="modal-dialog">
-							<div class="modal-content">
-								<div class="modal-header">
-									<h5 class="modal-title text-dark">Thank you for contacting us!</h5>
-									<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-								</div>
-								<div class="modal-body text-dark">
-									<p>Message Successfully Sent</p>
-								</div>
-								<div class="modal-footer">
-									<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div> -->
 
-				<!-- End -->
-
-				<!-- <footer class="d-flex justify-content-center gap-3 m-5">
-					<div>&copy;  Capstone1 2024</div>
-					<div>|</div>
-					<div>Terms of Use</div>
-					<div>|</div>
-					<div>All rights reserved.</div>
-				</footer> -->
+					
 
 
 			</body>
