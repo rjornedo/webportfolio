@@ -1,75 +1,298 @@
+/*Body*/
 
-/*Navbar*/
-.navbar, .navbar-nav, .nav-link, .navbar-brand {
-	font-family: 'Sour Gummy', sans-serif;
-	font-size: 25px;
+body {
+background-image: url(./images/matrix.png); 
+background-size: cover; 
+background-position: center; 
+background-attachment: fixed; 
+font-family: 'Rubik', sans-serif;
+
+
 }
 
-html, body {
-	scroll-behavior: smooth;
+body::before {
+content: ''; /* Necessary for the pseudo-element */
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: rgba(0, 0, 0, 0.5); 
+z-index: -1; /* Ensure it stays behind the content */
+}
+
+/*Navbar*/
+
+.navbar {
+position: sticky;  
+top: 0;  
+z-index: 1000;  
+background-image: url(./images/metal1.png); 
+background-size: cover; 
+background-position: center; 
+background-repeat: no-repeat; 
+height: 80px; 
+font-size: 24px;
+font-weight: 700;
+display: flex; 
+justify-content: space-between; 
+align-items: center; 
+padding-left: 10px; 
+padding-right: 10px;
+opacity: 0.9;
+}
+
+.navbar-brand {
+position: absolute; 
+left: 10px; 
+top: 50%; 
+transform: translateY(-50%); 
+}
+
+/* Hamburger menu */
+.navbar-toggler {
+position: absolute; 
+right: 10px; 
+}
+
+
+.navbar-collapse {
+display: flex; 
+justify-content: center; 
+flex-grow: 1; 
+}
+
+.navbar-nav .nav-link {
+color: white; 
+}
+
+.navbar-nav .nav-link.active {
+color: lawngreen;    
+
+}
+
+.navbar-nav .nav-link:hover {
+color: lawngreen; 
+}
+
+/* Welcome Banner Styles */
+.welcome-banner {
+background-color: rgba(0, 0, 0, 0); 
+color: #fff;
+text-align: center;
+padding: 50px 0;
+}
+
+.welcome-banner h1 {
+font-size: 3rem;
+margin-bottom: 20px;
+color: #FFD700; 
+font-weight: 700;
+}
+
+.welcome-banner p {
+font-size: 1.5rem;
+color: skyblue; 
+font-weight: 700;
+}
+
+/* Add  animation effect */
+.welcome-banner h1, .welcome-banner p {
+animation: fadeInUp 2s ease-out;
+}
+
+/* fade-in effect */
+@keyframes fadeInUp {
+0% {
+opacity: 0;
+transform: translateY(30px);
+}
+100% {
+opacity: 1;
+transform: translateY(0);
+}
 }
 
 
 /*About Me*/
-#landing {
-	background: linear-gradient(
-		rgba(0, 34, 65, 0.4), 
-		rgba(0, 34, 65, 0.4) 
-	),
-	url("./images/bg.png");	
-	background-size: cover;
-	background-position: 30% 90%;
-	letter-spacing: 3px;
-	overflow: hidden;
 
+
+#carouselControls {
+border: 2px solid #333; 
+border-radius: 10px; 
+padding: 10px; 
 }
 
-#title, #me  {
-	font-family: Libre Baskerville;
-	text-shadow: 3px 3px 0px black, -3px -3px 0px black, 
-	3px -3px 0px black, -3px 3px 0px black;
+.carousel-inner img {
+border-radius: 5px; /
 }
 
-.mt-3 {
-	font-family: 'Sour Gummy', sans-serif;
-	font-size: 1.3em;
-
+/* Pulsating Text with Text-Shadow */
+.pulsate {
+animation: pulseAnimation 1.5s infinite ease-in-out;
+color: #FF6347; /* Initial text color (Tomato) */
+text-shadow: 0 0 10px #FF6347; /* Initial text-shadow for color */
 }
 
-#image {
-	width: 300px;          
-	height: 400px;         
-	border-radius: 50%; 
-	object-fit: cover; 
-	margin-bottom: 20px;    
+/* pulsate animation with color change */
+@keyframes pulseAnimation {
+0% {
+transform: scale(1); /* Normal size */
+opacity: 1; /* Fully opaque */
+text-shadow: 0 0 10px #FF6347; 
+}
+50% {
+transform: scale(1.1); /* Grow slightly */
+opacity: 0.8; /* Slightly transparent */
+text-shadow: 0 0 15px #FFD700; 
+}
+100% {
+transform: scale(1); /* Return to normal size */
+opacity: 1; /* Fully opaque */
+text-shadow: 0 0 10px #FF6347; 
+}
 }
 
-@media (max-width: 992px) {
-	#landing .row {
-		flex-direction: column; 
-		align-items: center;
-	}
-}
-
-#name, #title, .mt-3 {
-	text-align: center; 
-}
 /*Projects*/
 
+
+#projects {
+font-size: 2rem; 
+text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+font-weight: 700;
+border: 5px solid blanchedalmond; 
+border-radius: 10px; 
+background-image: url(./images/metal.png); 
+
+}
+
 .card {
-	border-radius: 8px;
+background-color: #f4f4f9; 
+border: 1px solid #ddd; 
+border-radius: 10px; 
+transition: transform 0.3s ease-in-out; 
 }
 
-.card-title, .card-text {
-	font-family: 'Sour Gummy', sans-serif;
+/* Change background color when hovering over the card */
+.card:hover {
+background-color: #3498db; /* Blue background on hover */
+transform: translateY(-10px); /* Slightly raise the card on hover */
 }
 
-/*Tools*/
-#tools {
-	font-family: 'Sour Gummy', sans-serif;
+/* Change text color inside the card */
+.card-body {
+color: #333; 
+}
+
+.card-title {
+color: #e74c3c; 
+font-size: 1.2rem; 
+font-weight: 600; 
+}
+
+/* Change color of the card text */
+.card-text {
+color: #555; 
+font-size: 1rem; 
+}
+
+.card .btn {
+background-color: #f39c12; 
+color: #fff; 
+border-radius: 20px; 
+border: none; 
+padding: 10px 20px; 
+transition: background-color 0.3s ease-in-out;
+}
+
+/* Button hover effect */
+.card .btn:hover {
+background-color: green; 
+}
+
+/*Gallery*/
+
+#gallery {
+font-size: 2rem; 
+text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+font-weight: 700;
+border: 5px solid blanchedalmond; 
+border-radius: 10px; 
+background-image: url(./images/metal.png); 
 
 }
 
-.modal-title, .modal-body {
-	font-family: Libre Baskerville;
+/* Gallery Styles */
+.container {
+  padding: 20px;
+}
+
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 10px;
+}
+
+.gallery img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+/* Hover effect */
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
+/* Modal (Enlarged Image) */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.modal:target {
+  display: flex; /* Show modal when targeted */
+}
+
+.modal img {
+  max-width: 90%;
+  max-height: 80vh;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+/* Close button */
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 10px 20px;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.close-btn:hover {
+  background-color: rgba(255, 0, 0, 0.7);
+}
+/* Hover effect to change color */
+.gallery img:hover {
+  transform: scale(1.05); /* Slight scale on hover */
+  filter: grayscale(0%) sepia(1) saturate(5) hue-rotate(90deg); /* Color change effect */
 }
